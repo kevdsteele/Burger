@@ -80,3 +80,10 @@ background: url("/assets/images/burger_list.png");
 background-repeat:no-repeat
 
 }
+
+.devoured {
+font-weight:lighter;
+color: gainsboro;
+text-decoration: line-through;
+text-decoration-color:red;
+}
