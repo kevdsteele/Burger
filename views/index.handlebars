@@ -1,0 +1,100 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Eat-Da-Burger</h1>
+
+  </div>
+</div>
+
+<div class="container maincont pt-3">
+<div class="row">
+<div class="col-md-4">
+    <h4 class="text-center">Burgers Waiting To Be Eaten</h4>
+
+<ul class="list-group">
+  {{#each burgers}}
+
+  {{#unless devoured}}
+   <li class="list-group-item">
+    <span class="float-left">{{this.burger_name}}
+
+    </span> 
+    <span class="float-right">
+      <button data-burgerid="{{this.id}}" class="devour"></button>
+    </span>
+       
+
+    
+  </li>
+      
+    {{/unless}}
+
+ 
+  {{/each}}
+  </ul>
+
+</div>
+<div class="col-md-4 text-center">
+    <div class="row justify-content-center"><h2 class="text-center" >Add a Burger</h2></div>
+    <div class="row justify-content-center">
+         <img class="mb-1" height="200" width="200" src="/assets/images/burgers.png" alt="burger image"> 
+    </div>
+    <div class="row justify-content-center">
+        <form class="create-form">
+
+  <div class="form-group">
+    <label for="burger">Burger Name:</label>
+    <input type="text" id="burger" name="name">
+  </div>
+
+
+
+  <button class="addbtn btn-warning " type="submit">Add Burger</button>
+</form>
+
+    </div>
+   
+</div>
+<div class="col-md-4 text-center">
+    <h4>RIP Devoured Burgers</h4>
+
+<ul class="list-group">
+  {{#each burgers}}
+
+  {{#if devoured}}
+   <li class="list-group-item">
+    <p>
+       {{this.burger_name}}
+
+    
+    </p>
+  </li>
+      
+    {{/if}}
+
+ 
+  {{/each}}
+</ul>
+
+    
+</div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
