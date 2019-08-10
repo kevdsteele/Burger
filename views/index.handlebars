@@ -1,9 +1,4 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Eat-Da-Burger</h1>
 
-  </div>
-</div>
 
 <div class="container maincont pt-3">
 <div class="row">
@@ -38,12 +33,26 @@
     <div class="row justify-content-center">
          <img class="mb-1" height="200" width="200" src="/assets/images/burgers.png" alt="burger image"> 
     </div>
-    <div class="row justify-content-center">
-        <form class="create-form">
+   
+    <form class="create-form d-block">
 
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burger" name="name">
+  <div class="form-group d-block pb-3">
+    <div><label for="burger">Burger Name</label>
+    </div>
+    <div><input type="text" id="burger" name="bname" placeholder="Enter a burger name"></div>
+    
+  </div>  
+  <div class="form-group row justify-content-center">
+    <label for="restaurant">Restaurant Name</label>
+  <select class="form-control w-75 text-align-center" id="restaurant">
+      <option value="1">McDonalds</option>
+      <option value="2">Burger King</option>
+      <option value="3">Wendy's</option>
+      <option value="4">Sonic</option>
+      <option value="5">Checkers</option>
+      <option value="6">Red Robin</option>
+      <option value="7">Five Guys</option>
+    </select>
   </div>
 
 
@@ -51,7 +60,7 @@
   <button class="addbtn btn-warning " type="submit">Add Burger</button>
 </form>
 
-    </div>
+    
    
 </div>
 <div class="col-md-4 text-center">

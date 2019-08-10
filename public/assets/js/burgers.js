@@ -28,9 +28,11 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#burger").val().trim()
-     
+      name: $("#burger").val().trim(),
+      restaurant_id: $("#restaurant").val().trim()
     };
+
+    console.log("burger info to be submitted is " + newBurger.name + " " + newBurger.restaurant_id)
 
    
     $.ajax("/api/burgers", {

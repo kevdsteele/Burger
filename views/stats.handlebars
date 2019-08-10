@@ -1,0 +1,27 @@
+
+
+
+<div class="container stats w-75">
+<div class="row text-center">   
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+     
+      <th scope="col">Restaurant</th>
+      <th scope="col">Burgers Devoured</th>
+      
+  </thead>
+  <tbody>
+      {{#each burgers}}
+      <tr>
+      
+      <td>{{this.restaurant_name}}</td>
+      <td>{{this.count}}</td>
+     
+    </tr>
+     {{/each}}
+
+       </tbody>
+</table>
+</div>
+</div>

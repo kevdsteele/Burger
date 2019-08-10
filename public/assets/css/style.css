@@ -27,6 +27,7 @@ body{
 }
 
 .list-group-item {
+  font-size:18px;
   background: #dbb17a;
   color:white;
   font-family:'Permanent Marker', cursive;
@@ -81,9 +82,43 @@ background-repeat:no-repeat
 
 }
 
+.addbtn:hover {
+  background-color: #ebddcb;
+  color:  #442c0c;
+  font-weight: bold;
+  text-shadow: 2px 2px white;
+}
+
 .devoured {
 font-weight:lighter;
 color: gainsboro;
 text-decoration: line-through;
 text-decoration-color:red;
+}
+
+.stats {
+  background: #ebddcb;
+}
+
+.nav-item {
+  background: transparent;
+  font-size:44px;
+  text-shadow: 2px 2px white;
+}
+
+.nav-link {
+  color: #442c0c;
+}
+
+.nav-item:hover {
+  text-decoration:underline;
+  color:#442c0c;
+}
+
+.nav-link:hover {
+  color:#442c0c;
+}
+
+select {
+  text-indent: 88px;
 }

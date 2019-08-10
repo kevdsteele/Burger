@@ -51,6 +51,8 @@ var orm = {
     });
   },
   insertOne: function(table, cols, vals, cb) {
+
+    console.log("vals are" + vals[0] + " " + vals[1])
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -87,7 +89,25 @@ var orm = {
 
       cb(result);
     });
+  },
+  findWhoHasMost: function(tableOneCol, tableTwoForeignKey, tableOne, tableTwo, cb) {
+    var queryString =
+      "SELECT ??, COUNT(??) AS count FROM ?? LEFT JOIN ?? ON ??.??= ??.id WHERE burgers.devoured = true GROUP BY ?? ORDER BY count DESC ";
+
+    connection.query(
+      queryString,
+      [tableOneCol, tableOneCol, tableOne, tableTwo, tableTwo, tableTwoForeignKey, tableOne, tableOneCol],
+      function(err, result) {
+        if (err) {
+            throw err;
+          }
+    
+          cb(result);
+      }
+    );
   }
+
+
 };
 
 // Export the orm object for the model (cat.js).

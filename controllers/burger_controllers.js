@@ -16,11 +16,21 @@ router.get("/", function(req, res) {
   });
 });
 
+router.get("/stats", function(req, res) {
+    burger.findWhoHasMost(function(data) {
+      var hbsObject = {
+        burgers: data
+      };
+      console.log("Heare are teh top counts" +hbsObject);
+      res.render("stats", hbsObject);
+    });
+  });
+
 router.post("/api/burgers", function(req, res) {
   burger.insertOne([
-    "burger_name"
+    "burger_name", "restaurant_id"
   ], [
-    req.body.name
+    req.body.name, req.body.restaurant_id
   ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
