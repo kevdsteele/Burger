@@ -90,7 +90,7 @@ var orm = {
       cb(result);
     });
   },
-  findWhoHasMost: function(tableOneCol, tableTwoForeignKey, tableOne, tableTwo, cb) {
+  findMostDevoured: function(tableOneCol, tableTwoForeignKey, tableOne, tableTwo, cb) {
     var queryString =
       "SELECT ??, COUNT(??) AS count FROM ?? LEFT JOIN ?? ON ??.??= ??.id WHERE burgers.devoured = true GROUP BY ?? ORDER BY count DESC ";
 
@@ -106,6 +106,7 @@ var orm = {
       }
     );
   }
+
 
 
 };
