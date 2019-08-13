@@ -27,6 +27,18 @@ $(function() {
     
     event.preventDefault();
 
+    function validateForm() {
+      var isValid = true;
+      
+        if ($("#burger").val() === "" || ($("#restaurant").val()==="")) {
+          isValid = false;
+        }
+     
+      return isValid;
+    }
+
+    if (validateForm()) {
+
     var newBurger = {
       name: $("#burger").val().trim(),
       restaurant_id: $("#restaurant").val().trim()
@@ -45,5 +57,10 @@ $(function() {
         location.reload();
       }
     );
-  });
+    } else {
+      alert("Please enter a burger name and choose a restaurant")
+    }
+  }); 
+
+  
 });
